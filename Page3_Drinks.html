@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matt's Pizzeria - POS</title>
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        body{background-color: black;}
+        p{color: white}
+        
+    </style>
+
+
+</head>
+
+<body>
+    <img src ="images/pizza.Banner.jpg" alt="Matt's Pizzeria" width=100% height="50%">
+    <div id="nav">
+        <ul>
+            <li><a href= "index.html">Specialties</a></li>
+            <li><a href= "Page2_CustomPizza.html">Create Your Own</a></li>
+            <li><a href= "Page3_Drinks.html">Drinks</a></li>
+            <li><a href= "Page4_CustomerInfo.html">Customer Information</a></li>
+        </ul>
+    </div>
+    
+    <p><br><font size="5%"><em>Drinks</em></font></p>
+
+    <div id = "container">
+        <div id="left-container">
+            <table>
+                <tr>
+                    <td><center>
+                        <dt><u>Choose Size</u></dt><br>
+                            <dd><label>Small - $1.00 </label><input type="radio" name="drSize" value="drsmall"></dd><br>
+                            <dd><label>Medium - $1.75 </label><input type="radio" name="drSize" value="dtmedium"></dd><br>
+                            <dd><label>Large - $2.50 </label><input type="radio" name="drSize" value="drlarge"></dd><br>
+                            <br>
+                            <br>
+                            
+                        <dl>
+                            <dt><u>Choose Flavor</u></dt><br>
+                            <dt><label>Coca-Cola </label><input type="checkbox" name="drinks" value="coke"></dt>
+                            <dd><img src="images/coke.png" alt= "Coca-Cola" width= 100%></dd>
+                        </dl>
+                        <dl>
+                            <dt><label>Pepsi </label><input type="checkbox" name="drinks" value="pepsi"></dt>
+                            <dd><img src="images/pepsi.jpg" alt= "Pepsi" width= 100%></dd>
+                        </dl>
+                        <dl>
+                            <dt><label>Sprite </label><input type="checkbox" name="drinks" value="veggie"></dt>
+                            <dd><img src="images/sprite.jpg" alt= "Sprite" width= 100%></dd>
+                        </dl>
+                    </center></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="mid-container">
+            <table>
+                <tr>
+                    <td><center>
+                        <dl>
+                            <dt><label>Mountain Dew </label><input type="checkbox" name="drinks" value="mtdew"></dt>
+                            <dd><img src="images/mtdew.jpg" alt= "Mountain Dew" width= 100%></dd>
+                        </dl>
+                        <dl>
+                            <dt><label>Fanta </label><input type="checkbox" name="drinks" value="fanta"></dt>
+                            <img src="images/fanta.jpg" alt= "Fanta" width= 100%></dd>
+                        </dl>
+                        <dl>
+                            <dt><label>7-Up </label><input type="checkbox" name="drinks" value="7up"></dt>
+                            <img src="images/7-up.jpg" alt= "7-Up" width= 100%></dd>
+                        </dl>
+                    </center></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="right-container">
+            <p><font size= 6%>Order Information</font><br>
+            <textarea></textarea><br>
+            <br>
+            <br>
+
+            <span style="padding-left:45%" ><input type="button" value = "Add to Order" id="btn-spPizza" class="submit"></span>
+            </p>
+
+
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matt's Pizzeria - Custom Pizza</title>
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        body{background-color: black;}
+        p{color: white}
+        dt{font-size: larger; text-decoration: underline;}
+        
+    </style>
+
+
+</head>
+
+<body>
+    <img src ="images/pizza.Banner.jpg" alt="Matt's Pizzeria" width=100% height="50%">
+    <div id="nav">
+        <ul>
+            <li><a href= "index.html">Specialties</a></li>
+            <li><a href= "Page2_CustomPizza.html">Create Your Own</a></li>
+            <li><a href= "Page3_Drinks.html">Drinks</a></li>
+            <li><a href= "Page4_CustomerInfo.html">Customer Information</a></li>
+        </ul>
+    </div>
+    
+    <p><br><font size="5%"><em>Create Your Own</em></font></p>
+
+    <div id = "container2">
+        <div id="left-container2">
+            <table>
+                <tr>
+                    <td><center>
+                        <dl>
+                            <dt>Choose Size</dt>
+                            <dd><label>Small - $6.00 </label><input type="radio" name="Size" value="small"></dd><br>
+                            <dd><label>Medium - $8.00 </label><input type="radio" name="Size" value="medium"></dd><br>
+                            <dd><label>Large - $10.00 </label><input type="radio" name="Size" value="large"></dd><br>
+                            <dd><label>Xtra Large - $12.00 </label><input type="radio" name="Size" value="xlarge"></dd><br>
+                            <br>
+                            <br>
+                            
+
+                        </dl>
+                        <dl>
+                            <dt>Choose Topping's</dt>
+                            <dd><dd><label>Pepperoni - $ 1.00 </label><input type="checkbox" name="Topping" value="pepperoni"></dd><br>
+                            <dd><dd><label>Saugsage - $ 1.00 </label><input type="checkbox" name="Topping" value="saugsage"></dd><br>
+                            <dd><dd><label>Olives - $ .50 </label><input type="checkbox" name="Topping" value="olives"></dd><br>
+                            <dd><dd><label>Mushrooms - $ 1.50 </label><input type="checkbox" name="Topping" value="mushrooms"></dd><br>
+                            <dd><dd><label>Extra Cheese - $ 1.00 </label><input type="checkbox" name="Topping" value="cheese"></dd><br>
+                            <dd><dd><label>Bacon - $ 2.00 </label><input type="checkbox" name="Topping" value="bacon"></dd><br>
+                            <dd><dd><label>Canadian Bacon - $ 1.50 </label><input type="checkbox" name="Topping" value="canBacon"></dd><br>
+                            <dd><dd><label>Pineapple - $ 1.00 </label><input type="checkbox" name="Topping" value="pineapple"></dd><br>
+                            
+                        </dl>
+                        <dl>
+                           
+                        </dl>
+                    </center></td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div id="right-container2">
+            <p><font size= 6%>Order Information</font><br>
+            <textarea></textarea><br>
+            <br>
+            <br>
+
+            <span style="padding-left:45%" ><input type="button" value = "Add to Order" id="btn-spPizza" class="submit"></span>
+            </p>
+
+
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
