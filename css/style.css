@@ -80,6 +80,7 @@ textarea
     resize: none;
     width:100%;
     height: 80%;
+    font-size: x-large;
 }
 
 .submit
@@ -128,5 +129,6 @@ textarea
     font-size: 1.1rem;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: left;
+    padding-right: 10%;
 
 }

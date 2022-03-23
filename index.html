@@ -15,12 +15,12 @@
 
 </head>
 
-<body>
+<body id="page1">
     <img src ="images/pizza.Banner.jpg" alt="Matt's Pizzeria" width=100% height="50%">
     <div id="nav">
         <ul>
-            <li><a href= "index.html">Specialties</a></li>
-            <li><a href= "Page2_CustomPizza.html">Create Your Own</a></li>
+            <li><a href= "index.html" class="page1">Specialties</a></li>
+            <li><a href= "Page2_CustomPizza.html" class="page2">Create Your Own</a></li>
             <li><a href= "Page3_Drinks.html">Drinks</a></li>
             <li><a href= "Page4_CustomerInfo.html">Customer Information</a></li>
         </ul>
@@ -34,15 +34,15 @@
                 <tr>
                     <td><center>
                         <dl>
-                            <dt><label>Classic Pepperoni - $8.00 </label><input type="checkbox" name="Specialties" value="classicpep"></dt>
+                            <dt><label>Classic Pepperoni </label><input type="checkbox" name="pep" value="Classic Pepperoni"  name ="8"></dt>
                             <dd><img src="images/pizzaClassicPep.jpg" alt= "Pepperoni Specialty" width= 100%></dd>
                         </dl>
                         <dl>
-                            <dt><label>Buffalo Chicken - $13.00 </label><input type="checkbox" name="Specialties" value="buffalochicken"></dt>
+                            <dt><label>Buffalo Chicken </label><input type="checkbox" name="pep" value="Buffalo Chicken" name="13"></dt>
                             <dd><img src="images/pizzaBuffaloChicken.jpg" alt= "Buffalo Chicken Specialty" width= 100%></dd>
                         </dl>
                         <dl>
-                            <dt><label>Veggie - $13.00 </label><input type="checkbox" name="Specialties" value="veggie"></dt>
+                            <dt><label>Veggie </label><input type="checkbox" name="pep" value="Veggie Lovers"></dt>
                             <dd><img src="images/pizzaVeggie.jpg" alt= "Veggie Specialty" width= 100%></dd>
                         </dl>
                     </center></td>
@@ -55,15 +55,15 @@
                 <tr>
                     <td><center>
                         <dl>
-                            <dt><label>Olive & Pepperoni - $13.00 </label><input type="checkbox" name="Specialties" value="olivepep"></dt>
+                            <dt><label>Olive & Pepperoni </label><input type="checkbox" name="pep" value="Olive and Pepperoni"></dt>
                             <dd><img src="images/pizzaOlivePepperoni.jpg" alt= "Olive Pepporni Specialty" width= 100%></dd>
                         </dl>
                         <dl>
-                            <dt><label>Chicken Salad -$13.00 </label><input type="checkbox" name="Specialties" value="chickensalad"></dt>
+                            <dt><label>Chicken Salad </label><input type="checkbox" name="pep" value="Chicken Salad"></dt>
                             <img src="images/pizzaChickenSalad.jpg" alt= "Chicken Salad Specialty" width= 100%></dd>
                         </dl>
                         <dl>
-                            <dt><label>The Works - $15.00 </label><input type="checkbox" name="Specialties" value="theworks"></dt>
+                            <dt><label>The Works </label><input type="checkbox" name="pep" value="The Works"></dt>
                             <img src="images/pizzaTheWorks.jpg" alt= "The Works Specialty" width= 100%></dd>
                         </dl>
                     </center></td>
@@ -71,9 +71,10 @@
             </table>
         </div>
 
-        <div id="right-container">
+        <div id="right-container"> 
             <p><font size= 6%>Order Information</font><br>
-            <textarea></textarea><br>
+            <textarea input type="text" name="txtArea" id="txtArea" readonly></textarea><br>
+
             <br>
             <br>
 
@@ -81,16 +82,17 @@
 
             <font size= 5%>
             Select Size:
-            <label><span style="padding-left:20px">S </span></label><input type="radio" name="Sizes" value="s">
-            <label><span style="padding-left:20px">M +$3.00 </span></label><input type="radio" name="Specialties" value="m">
-            <label><span style="padding-left:20px">L +$5.00 </span></label><input type="radio" name="Specialties" value="l">
-            <label><span style="padding-left:20px">XL +$7.50 </span></label><input type="radio" name="Specialties" value="xl">
+            <label><span style="padding-left:20px">S $10.00</span></label><input type="radio" id="sm" name="rdBtn" value="Small">
+            <label><span style="padding-left:20px">M $13.00 </span></label><input type="radio" id="md" name="rdBtn" value="Medium">
+            <label><span style="padding-left:20px">L $15.00 </span></label><input type="radio" id="lg" name="rdBtn" value="Large">
+            <label><span style="padding-left:20px">XL $17.50 </span></label><input type="radio" id="xl" name="rdBtn" value="Extra Large">
             </font>
             <br>
             <br>
             <br>
 
-            <span style="padding-left:45%" ><input type="button" value = "Add to Order" id="btn-spPizza" class="submit"></span>
+            <span style="padding-left:45%" ><input id="btn-spPizza" type="button" value = "Add to Order" class="submit"></span>
+            <!--<span style="padding-left:45%"><button onclick="changeText()"> Add to Order</button></span>-->
             </p>
 
 
@@ -98,9 +100,74 @@
 
         </div>
     </div>
+    <script type="text/javascript" src="script/script.js"></script>
+
+    
 
 </body>
 
+<!--<script>
+    const btnAdd = document.getElementById("btn-spPizza");
+    let txtArea = document.getElementById("txtArea");
+    let specialties = document.getElementsByclass("specialties");
+//let specialPizzas = []
+
+//document.getElementById("txtArea").innerHTML = "Matt's Pizzeria";
+    txtArea.innerHTML = "Welcome to Matt's Pizzeria\n\n";
+//let specialties = document.getElementByName("specialties");
+
+
+
+    btnAdd.addEventListener('click', e => 
+    {
+        for(let i = 0; i < specialties.length; i++)
+        {
+            if(specialties[i].Checked ==true){
+            txtArea.innerHTML += specialties[i].value;
+            }
+        
+
+
+        }
+    });
+
+<dt><label>Classic Pepperoni - $8.00 </label><input type="checkbox" id="pep" value="Classic Pepperoni" price= 8></dt>
+                            <dd><img src="images/pizzaClassicPep.jpg" alt= "Pepperoni Specialty" width= 100%></dd>
+                        </dl>
+                        <dl>
+                            <dt><label>Buffalo Chicken - $13.00 </label><input type="checkbox" id="bufChk" value="Buffalo Chicken" price =13></dt>
+                            <dd><img src="images/pizzaBuffaloChicken.jpg" alt= "Buffalo Chicken Specialty" width= 100%></dd>
+                        </dl>
+                        <dl>
+                            <dt><label>Veggie - $13.00 </label><input type="checkbox" id="veg" value="Veggie Lovers"></dt>
+                            <dd><img src="images/pizzaVeggie.jpg" alt= "Veggie Specialty" width= 100%></dd>
+                        </dl>
+                    </center></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="mid-container">
+            <table>
+                <tr>
+                    <td><center>
+                        <dl>
+                            <dt><label>Olive & Pepperoni - $13.00 </label><input type="checkbox" id="olivePep" value="Olive and Pepperoni"></dt>
+                            <dd><img src="images/pizzaOlivePepperoni.jpg" alt= "Olive Pepporni Specialty" width= 100%></dd>
+                        </dl>
+                        <dl>
+                            <dt><label>Chicken Salad -$13.00 </label><input type="checkbox" id="chkSal" value="chickensalad"></dt>
+                            <img src="images/pizzaChickenSalad.jpg" alt= "Chicken Salad Specialty" width= 100%></dd>
+                        </dl>
+                        <dl>
+                            <dt><label>The Works - $15.00 </label><input type="checkbox" class="specialties" value="theworks"></dt>
+                            <img src="images/pizzaTheWorks.jpg" alt= "The Works Specialty" width= 100%></dd>
+                        </dl>
+
+
+
+
+</script>-->
+
 </html>
 
-<script></script>
